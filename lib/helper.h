@@ -11,6 +11,10 @@ public:
     bool print_txt(const char *filePath);
 
     bool is_valid(const std::string input);
+
+    std::string getCode();
+
+    void clear_screen();
 };
 
 #endif

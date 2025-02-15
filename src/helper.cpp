@@ -38,3 +38,32 @@ bool helper::is_valid(const std::string input)
 
     return true;
 }
+
+std::string helper::getCode()
+{
+    const char *clue = "../assets/clue.txt";
+    std::string input;
+
+    print_txt(clue);
+
+    bool is_valid_input = false;
+
+    while (!is_valid_input)
+    {
+        std::cout << "Code: ";
+        std::cin >> input;
+
+        is_valid_input = is_valid(input);
+    }
+
+    return input;
+}
+
+void helper::clear_screen()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}

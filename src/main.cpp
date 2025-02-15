@@ -12,17 +12,24 @@ int main()
     const char *greeting = "../assets/greeting.txt";
     const char *win = "../assets/win.txt";
     const char *cheat = "../assets/cheat.txt";
+    const char *secret = "../assets/secret.txt";
+    const char *repositoryUrl = "https://github.com/victoria-ballesteros/code_breaker";
 
     char force_option = 'n';
 
+    _helper.clear_screen();
+    _helper.print_txt(greeting);
+    cout << endl;
+
     while (tolower(force_option) == 'n')
     {
-        string input_code = getCode();
+        string input_code = _helper.getCode();
 
         bool attempt = _secret.is_secret_code(input_code);
 
         if (!attempt)
         {
+            _helper.clear_screen();
             cout << "Wrong answer. Do you wan't to force your way to the secret code? (n/y): ";
             cin >> force_option;
 
@@ -31,40 +38,35 @@ int main()
                 force _force;
                 _force.execute();
                 _helper.print_txt(cheat);
+                cout << endl;
                 force_option = 'n';
             }
         }
         else
         {
-            // To do: special message to Mike.
-            // Repository URL.
-            // Private key to clone it.
+            _helper.clear_screen();
 
-            // system("cls");
             _helper.print_txt(win);
+
+            cout << endl;
+            cout << "Source code: " << repositoryUrl << endl;
+            cout << "Look inside and you'll find out the missing piece of the message." << endl;
+            cout << endl;
+            cout << "AES256 ciphertext: " << _secret.get_cipher_message() << endl;
+            cout << endl;
+            cout << "Key: ???" << endl;
+            cout << endl;
+            
+            // Uncomment this to see the message.
+            // _helper.clear_screen();
+            // _helper.print_txt(secret);
+            // cout << endl;
+            // _secret.execute();
+            // cout << endl;
+
             return 0;
         }
     }
 
     return 0;
-}
-
-string getCode()
-{
-    const char *clue = "../assets/clue.txt";
-    string input;
-
-    _helper.print_txt(clue);
-
-    bool is_valid_input = false;
-
-    while (!is_valid_input)
-    {
-        cout << "Code: ";
-        cin >> input;
-
-        is_valid_input = _helper.is_valid(input);
-    }
-
-    return input;
 }
