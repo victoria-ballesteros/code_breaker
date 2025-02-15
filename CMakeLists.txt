@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.10)
+project(CodeBreaker)
+include_directories(${CMAKE_SOURCE_DIR}/include)
+add_executable(CodeBreaker src/main.cpp src/helper.cpp src/encrypt.cpp src/secret.cpp src/force.cpp)
+target_link_libraries(CodeBreaker PRIVATE crypto)
