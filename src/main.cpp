@@ -9,14 +9,13 @@ string getCode();
 
 int main()
 {
-    const char *greeting = "../assets/greeting.txt";
-    const char *win = "../assets/win.txt";
-    const char *cheat = "../assets/cheat.txt";
-    const char *secret = "../assets/secret.txt";
+    const char *greeting = "greeting.txt";
+    const char *win = "win.txt";
+    const char *cheat = "cheat.txt";
+    const char *secret = "secret.txt";
     const char *repositoryUrl = "https://github.com/victoria-ballesteros/code_breaker";
 
     char force_option = 'n';
-
     _helper.clear_screen();
     _helper.print_txt(greeting);
     cout << endl;
@@ -57,13 +56,14 @@ int main()
             cout << "Key: ???" << endl;
             cout << endl;
             
+            
             // Uncomment this to see the message.
-            // _helper.clear_screen();
-            // _helper.print_txt(secret);
-            // cout << endl;
-            // _secret.execute();
-            // cout << endl;
-
+            //_helper.clear_screen();
+            //_helper.print_txt(secret);
+            //cout << endl;
+            //_secret.execute();
+            //cout << endl;
+            system("pause");
             return 0;
         }
     }
