@@ -34,5 +34,5 @@ make
 - There's two .lib files inside the assets folder. This ones must be always in the same folder as the main.exe
 - To compile, cd the assets folder and execute the next line (must have mingw32 compiler installed):
 ```sh
-x86_64-w64-mingw32-g++ src/*.cpp -std=c++11 -static-libstdc++ -o main.exe -Ilib/ -lssl libcrypto.lib libssl.lib
+x86_64-w64-mingw32-g++ ../src/*.cpp -std=c++11 -static-libstdc++ -o main.exe -Ilib/ -lssl libcrypto.lib libssl.lib
 ```

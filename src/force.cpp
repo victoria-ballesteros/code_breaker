@@ -10,22 +10,24 @@ void force::execute()
 
     force::found.store(false); 
 
-    for (auto const &[month, days] : months_dictionary)
+    for (auto const &entry : months_dictionary)
     {
+        const char &month = entry.first;
+        const int &days = entry.second;
+    
         int step = days / num_threads + 1;
-
+    
         for (int i = 0; i < num_threads; i++)
         {
             int start = i * step + 1;
             int end = std::min(start + step, days + 1);
-
+    
             if (start <= days)
             {
                 threads.emplace_back(test_combinations, month, start, end);
             }
         }
     }
-
     for (auto &t : threads)
     {
         t.join();
