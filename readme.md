@@ -17,16 +17,12 @@ sudo dnf install cmake gcc-c++ make git -y
 sudo dnf install openssl openssl-devel
 sudo dnf install libssl-dev
 ```
-***Windows*** 
-Download and install MinGW-w64 and CMake from their official websites.
-
 ## **Project setup:**
 ```sh
 mkdir build
 cd build
 cmake ..
 ```
-
 ## **Compile and execute:**
 ***Linux and MacOs***
 ```sh
@@ -34,10 +30,9 @@ cd build
 make
 ./CodeBreaker
 ```
-***Windows***
+### WINDOWS (IMPORTANT)
+- There's two .lib files inside the assets folder. This ones must be always in the same folder as the main.exe
+- To compile, cd the assets folder and execute the next line (must have mingw32 compiler installed):
 ```sh
-cd build
-make
-CodeBreaker.exe
+x86_64-w64-mingw32-g++ src/*.cpp -std=c++11 -static-libstdc++ -o main.exe -Ilib/ -lssl libcrypto.lib libssl.lib
 ```
-
