@@ -14,7 +14,7 @@ class secret
 
     string custom_key = "SinMiedoAlExitoYConDolorDeCabeza";
 
-    string cipher_message = "el3XTwmmomznToihv+M8DtyMEd/eoE/FoO3BACjXPOvejABPDmALZVdNgRXuzYVznfOwij4RdmYai15t52Se8B2tR/Yo9zbCqUOIA9m2+mIEDtVXril1WN6IK/ohcozMnEDXaq1xMFNUUp1m4SueBcPsvhhkMoNK/nkI25mh4FkXfOGedSL6gd0iunA+gzZMJwDjoVnfWoZ8AG+rKw06KprGnn3jMjNmZvwvLDH9lnw38AHvCUC93ix9i2CrXi/UZdvSgrLA/uWO2sSPpRHz7P0gTl8Mar0xLa4K7CgF6BKhLisf2T99IATPCCqafxhR";
+    string cipher_message = "L/bCV3oxGeQhdSt5CbDuW6h2ds+lEgj5kCRu00uMsXOKt7er4oAXw2hDELIz81lN0DSDLqgFNeCTrp/DuEzcNqDkdn+Dv+GwH3Hu2x/PBjUe1yH5gJf6h7lGHo7m1hkosXfeYnRL2kuKchLIOIjD1TrV7myU2kgJZFOzE8iSEZw6SNAuwbbYNqE2QZqg+9vVGTjQGUZH8NsGtcjjTZQBxAtd6nTjAYR+NI0FKGrd1+Uy//IBPaFUdzediAhBSbw4FeQYNg+5nkojp6/RngQOBJolZA1NDJRAD1eAXLAqOOoXOWUv/Rp7cA0RwDs01V+3";
 
 public:
     bool is_secret_code(string &code);
