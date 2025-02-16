@@ -56,14 +56,15 @@ int main()
             cout << "Key: ???" << endl;
             cout << endl;
             
-            
             // Uncomment this to see the message.
             //_helper.clear_screen();
             //_helper.print_txt(secret);
             //cout << endl;
             //_secret.execute();
             //cout << endl;
+
             system("pause");
+            
             return 0;
         }
     }
