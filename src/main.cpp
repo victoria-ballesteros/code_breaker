@@ -9,10 +9,10 @@ string getCode();
 
 int main()
 {
-    const char *greeting = "greeting.txt";
-    const char *win = "win.txt";
-    const char *cheat = "cheat.txt";
-    const char *secret = "secret.txt";
+    const char *greeting = "../assets/greeting.txt";
+    const char *win = "../assets/win.txt";
+    const char *cheat = "../assets/cheat.txt";
+    const char *secret = "../assets/secret.txt";
     const char *repositoryUrl = "https://github.com/victoria-ballesteros/code_breaker";
 
     char force_option = 'n';
@@ -57,11 +57,11 @@ int main()
             cout << endl;
             
             // Uncomment this to see the message.
-            //_helper.clear_screen();
-            //_helper.print_txt(secret);
-            //cout << endl;
-            //_secret.execute();
-            //cout << endl;
+            // _helper.clear_screen();
+            // _helper.print_txt(secret);
+            // cout << endl;
+            // _secret.execute();
+            // cout << endl;
 
             system("pause");
             
